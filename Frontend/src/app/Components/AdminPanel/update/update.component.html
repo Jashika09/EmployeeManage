@@ -1,0 +1,42 @@
+<div class="main">
+    <header>
+        <app-admin-header></app-admin-header>
+    </header>
+    
+    <div class= "update">
+    
+        <form (ngSubmit)="onSubmit()">
+          <b><h1>Update Employee</h1></b>
+          <div class="form-group">
+            <label for="name">First Name</label>
+            <input type="text" class="form-control" id="firstName" required [(ngModel)]="employee.firstName" name="firstName">
+          </div>
+      
+          <div class="form-group">
+            <label for="name">Last Name</label>
+            <input type="text" class="form-control" id="lastName" required [(ngModel)]="employee.lastName" name="lastName">
+          </div>
+
+          <div class="form-group">
+            <label for="dob">DOB</label>
+            <input type="date" class="form-control" id="date" required [(ngModel)]="employee.dob" name="dob">
+          </div>
+      
+          <div class="form-group">
+            <label for="name">Email Id</label>
+            <input type="text" class="form-control" id="emailId" required [(ngModel)]="employee.email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="phoneNo">Contact Number</label>
+            <input type="text" class="form-control" id="phoneNo" required [(ngModel)]="employee.phoneNo" name="phoneNo">
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" id="address" required [(ngModel)]="employee.address" name="address"></textarea>
+
+          </div>
+      
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+</div>

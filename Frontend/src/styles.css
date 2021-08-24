@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+
+
+.signup-or {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+input{
+  padding: 10px !important;
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.tx-tfm {
+  text-transform: uppercase;
+}
+
+form .error {
+  color: #ff0000;
+}
+
+#second {
+  display: none;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

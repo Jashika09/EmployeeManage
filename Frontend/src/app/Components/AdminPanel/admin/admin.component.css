@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.main{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: url("/assets/images/background.png");
+    background-size: cover;
+    float: left;
+}
+
+.form-part{
+    width: 84%;
+    float: right;
+    margin: 2% 0;
+}
+
+.form-horizontal{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid rgb(240, 14, 14);
+  }
+h1,label{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.input-group .form-control .span {
+   
+    float: left;
+    margin-bottom: 10px;
+}
+
+
+*[role="form"] {
+   padding: 20px;
+   margin: 0 auto;
+   border-radius: 0.3em;
+   background-color: #ebe7e7;
+}
+span{
+    color: red;
+}
+
+.footer{
+    width: 100%;
+    float: left;
+}
+@media screen and (max-width: 715px) {
+    .form-part {
+      width: 90%;
+      height: auto;
+      position: relative;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .form-part {
+      text-align: center;
+      float: none;
+    }
+  }
+
+
+

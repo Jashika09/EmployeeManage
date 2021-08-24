@@ -1,0 +1,111 @@
+<div class="bg">
+    <div class="container">
+      <div class="login">
+        <div id="first">
+          <div class="myform form">
+            <div class="logo mb-3">
+              <div class="col-md-12 text-center">
+                <h1>Login 🧑🏽‍💻</h1>
+              </div>
+            </div>
+            <form class="form" [formGroup]="lform" (ngSubmit)="onLogin()">
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter Email"
+                  formControlName="email"
+                 
+                />
+                <div
+                  *ngIf="
+                    lform.get('email')?.invalid && lform.get('email')?.touched
+                  "
+                  class="error error-danger"
+                >
+                  <small *ngIf="lform.get('email')?.errors?.required"
+                    >Please enter email</small
+                  >
+                  <small *ngIf="lform.get('email')?.errors?.email"
+                    >Please enter valid Email</small
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter Password"
+                  formControlName="password"
+                 
+                />
+                <div
+                  *ngIf="
+                    lform.get('password')?.invalid &&
+                    lform.get('password')?.touched
+                  "
+                  class="error error-danger"
+                >
+                  <small *ngIf="lform.get('password')?.errors?.required"
+                    >Please enter password</small
+                  >
+                  <small *ngIf="lform.get('password')?.errors?.minlength"
+                    >Password shouldn't be less than 6 character
+                  </small>
+                </div>
+              </div>
+  
+              <div>
+                <button
+                  type="submit"
+                  class="btn btn-block mybtn btn-primary tx-tfm"
+                  [disabled]="lform.invalid"
+                >
+                  Login
+                </button>
+                <div
+                  *ngIf="
+                    (lform.get('email')?.invalid &&
+                      lform.get('password')?.invalid &&
+                      lform.get('email')?.touched) ||
+                    lform.get('password')?.touched
+                  "
+                >
+                  <div
+                    class="alert alert-danger"
+                    role="alert"
+                    *ngIf="lform.invalid"
+                  >
+                  <p>Please fill all fields.</p>
+                  </div>
+                </div>
+  
+                  <div class="signup-or">
+                    <hr class="hr-or" />
+                  </div>
+                <div>
+                  <p class="text-center">
+                    <a routerLink="/signup">Forget Password ?</a>
+                  </p>
+                </div>
+        
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  

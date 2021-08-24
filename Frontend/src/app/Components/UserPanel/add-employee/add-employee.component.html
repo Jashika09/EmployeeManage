@@ -1,0 +1,451 @@
+<div class="main">
+    <app-header></app-header>
+    <div id="form-part">
+
+        <form class="form-horizontal" role="form" [formGroup]="uform" (ngSubmit)="onSubmit()">
+            <h1>Employee Data</h1>
+            <div class="form-group">
+                <label for="firstName" class="col-sm-3 control-label">Name<span>*</span></label>
+                <div class="col-sm-2">
+                    <select class="selectpicker form-control" formControlName="title" [(ngModel)]="employee.title">
+                        <option>Mr</option>
+                        <option>Miss</option>
+                        <option>Mrs</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" id="firstName" placeholder="First Name" class="form-control" formControlName = "firstName" [(ngModel)] = "employee.firstName">
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" id="lastName" placeholder="Last Name" class="form-control"formControlName ="lastName" [(ngModel)] = "employee.lastName">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3">Gender<span>*</span></label>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                <input type="radio" id="female" name="gender" value="Female" formControlName="gender" [(ngModel)] = "employee.gender">Female
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                <input type="radio" id="maleRadio" name="gender" value="Male"formControlName="gender" [(ngModel)] = "employee.gender">Male
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-3 control-label">Email<span>*</span> </label>
+                <div class="col-sm-5">
+                    <input type="email" id="email" placeholder="Email" class="form-control" name= "email" formControlName = "email" [(ngModel)] = "employee.email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="birthDate" class="col-sm-3 control-label">Date of Birth<span>*</span></label>
+                <div class="col-sm-5">
+                    <input type="date" id="birthDate" class="form-control" formControlName="dob"[(ngModel)] = "employee.dob" >
+                </div>
+            </div>
+
+
+            
+            
+            <div class="form-group">
+                <label for="phoneNumber" class="col-sm-3 control-label">Phone number<span>*</span> </label>
+                <div class="col-sm-1">
+                    <input type="countryCode" id="countryCode" class="form-control" formControlName = "code" [(ngModel)] = "employee.code">
+                </div>
+                <div class="col-sm-4">
+                    <input type="phoneNumber" id="phoneNumber" placeholder="Phone number" class="form-control" formControlName = "phoneNo" [(ngModel)] = "employee.phoneNo">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="phoneNumber" class="col-sm-3 control-label">Previous Employer</label>
+                    <div class="col-sm-5">
+                        <input type="text" id="previousEmployee" placeholder="Previous Employer" class="form-control" name= "email"formControlName="previousEmployee" [(ngModel)] = "employee.previousEmployee" >
+            </div></div>
+
+            <div class="form-group">
+                <label for="phoneNumber" class="col-sm-3 control-label">Experience/Title</label>
+                <div class="col-sm-3">
+                    <div class="input-group">
+                        <select class="selectpicker form-control" formControlName="experience"[(ngModel)] = "employee.experience">
+                            <option>---Select Experience---</option>
+                            <option>no experience</option>
+                            <option>>1</option>
+                            <option>
+                                <1</option>
+                            <option>2 years</option>
+                            <option>3 years</option>
+                            <option>more than 3</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-5">
+                    <div class="input-group">
+                        <select class="selectpicker form-control" formControlName="position" [(ngModel)] = "employee.position">
+                            <option>---Select Position---</option>
+                            <option>Hr</option>
+                            <option>Software Developer</option>
+                            <option>Trainee</option>
+                            <option>Database Administrator</option>
+                            <option>Tester</option>
+                            <option>Support System</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="phoneNumber" class="col-sm-3 control-label">Higher Education</label>
+                <div class="col-sm-9">
+                    <div class="input-group">
+                        <select class="selectpicker form-control" formControlName="education" [(ngModel)] = "employee.education">
+                            <option>---Select Education---</option>
+                            <option>Bachelor's Degree</option>
+                            <option>Master's Degree</option>
+                            <option>Secondary School</option>
+                            <option>Diploma</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">Present Address<span>*</span></label>
+                    <div class="col-sm-5">
+                        <input type="text" id="address" placeholder="Present Address" class="form-control" formControlName = "address" [(ngModel)] = "employee.address">
+                    </div>
+                   
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">Country/State/City<span>*</span></label>
+                    <div class="col-sm-2">
+                        <input type="text" id="country" placeholder="Country" class="form-control" formControlName = "country" [(ngModel)] = "employee.country">
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" id="state" placeholder="State" class="form-control" formControlName ="state"[(ngModel)] = "employee.state">
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" id="city" placeholder="City" class="form-control" formControlName ="city" [(ngModel)] = "employee.city">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">Pincode<span>*</span></label>
+                    <div class="col-sm-5">
+                        <input type="text" id="pinCode" placeholder="Pincode" class="form-control" formControlName = "pinCode" [(ngModel)] = "employee.pinCode">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">PermanentAddress is same as presentAddress<span>*</span></label>
+                    <div class="col-sm-5" style="margin-top: 25px;">
+                        <input type="checkbox" id="PermanentAddress" value="PermanentAddress">
+                    </div>
+                   
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">Permanent Address<span>*</span></label>
+                    <div class="col-sm-5">
+                        <input type="text" id="PermanentAddress" placeholder="Permanent Address" class="form-control" autofocus>
+                    </div>
+                   
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">Country/State/City<span>*</span></label>
+                    <div class="col-sm-2">
+                        <input type="text" id="country" placeholder="Country" class="form-control" autofocus>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" id="state" placeholder="State" class="form-control" autofocus >
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" id="city" placeholder="City" class="form-control" autofocus >
+                    </div>
+                </div>
+                
+                    
+            <div class="form-group">
+                <div class="col-sm-9 col-sm-offset-3">
+                    <span class="help-block"><span>*</span>Required fields</span>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary " [disabled]="uform.invalid">Register</button>
+            </div>
+
+            <p>{{employee | json}}</p>
+            
+        </form> 
+    </div>
+    <app-footer></app-footer>
+</div>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+        <form class="form" [formGroup]="uform" (ngSubmit)="onSubmit()">
+                <h1>General Information</h1>
+                <div class="form-group">
+                    <label >First Name</label>
+                    <div class="col-md-2 ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i
+                                    class="glyphicon glyphicon-user"></i></span>
+                            <select class="selectpicker form-control">
+                                <option>Mr</option>
+                                <option>Miss</option>
+                                <option>Mrs</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group"><input id="fullName" placeholder="Full Name"
+                                class="form-control" required="true" value="" type="text" formControlName ="firstName"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Last Name</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group"><span class="input-group-addon"><i
+                                    class="glyphicon glyphicon-user"></i></span><input id="lastname"
+                                placeholder="Last Name" class="form-control" required="true" value="" type="text" formControlName ="lastName"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">DOB</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group"><span class="input-group-addon"><i
+                                    class="glyphicon glyphicon-calendar"></i></span><input id="DOB" 
+                                placeholder="Address Line 1" class="form-control" required="true" value="" type="date" formControlName = "dob">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Gender</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group" >
+                            <input class="form-check-input" type="radio"  id="femaleGender" name="female"
+                                value="option1" formControlName = "gender"/>
+                            <label class="form-check-label" for="femaleGender">Female</label>
+                            <input class="form-check-input" type="radio"  id="maleGender" name="female"
+                                value="option2" formControlName = "gender" />
+                            <label class="form-check-label" for="maleGender">Male</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Previous Employer</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group"><span class="input-group-addon"><i
+                                    class="glyphicon glyphicon-user"></i></span><input id="employee" 
+                                placeholder="Previous Employer" class="form-control" required="true" value=""
+                                type="text" formControlName = "previousEmployee"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Year Of Experience</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon" style="max-width: 100%;"><i
+                                    class="glyphicon glyphicon-list"></i></span>
+                            <select class="selectpicker form-control">
+                                <option>---Select Experience---</option>
+                                <option>no experience</option>
+                                <option>>1</option>
+                                <option>
+                                    <1</option>
+                                <option>2 years</option>
+                                <option>3 years</option>
+                                <option>more than 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Position</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon" style="max-width: 100%;"><i
+                                    class="glyphicon glyphicon-list"></i></span>
+                            <select class="selectpicker form-control" formControlName = "position">
+                                <option>---Select Position---</option>
+                                <option>Hr</option>
+                                <option>Software Developer</option>
+                                <option>Trainee</option>
+                                <option>Database Administrator</option>
+                                <option>Tester</option>
+                                <option>Support System</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Higher Education</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon" style="max-width: 100%;"><i
+                                    class="glyphicon glyphicon-education"></i></span>
+                            <select class="selectpicker form-control" formControlName = "higherEducation">
+                                <option>---Select Education---</option>
+                                <option>Bachelor's Degree</option>
+                                <option>Master's Degree</option>
+                                <option>Secondary School</option>
+                                <option>Diploma</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <h1>Contact Details</h1>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Present Address</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group"><span class="input-group-addon"><i
+                                    class="glyphicon glyphicon-home"></i></span><input 
+                                 placeholder="presentAddress" class="form-control" required="true"
+                                value="" type="text" formControlName = "address"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Permanent Address</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group"><span class="input-group-addon"><input
+                            class="form-check-input" type="checkbox"  value=""></span><input id="addressLine1"
+                                 placeholder="PermanentAddress" class="form-control" required="true"
+                                value="" type="text"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">City</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group"><span class="input-group-addon"><i
+                                    class="glyphicon glyphicon-home"></i></span><input 
+                                placeholder="City" class="form-control" required="true" value="" type="text" formControlName = "city"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">State/Province/Region</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group"><span class="input-group-addon"><i
+                                    class="glyphicon glyphicon-home"></i></span><input 
+                                placeholder="State/Province/Region" class="form-control" required="true" value=""
+                                type="text" formControlName = "state"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Postal Code/ZIP</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group"><span class="input-group-addon"><i
+                                    class="glyphicon glyphicon-home"></i></span><input
+                                placeholder="Postal Code/ZIP" class="form-control" required="true" value="" type="text" formControlName = "pinCode">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Country</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon" style="max-width: 100%;"><i
+                                    class="glyphicon glyphicon-list"></i></span>
+                            <select class="selectpicker form-control  countrypicker" data-live-search="true" formControlName = "country">
+                                <option>A really long option to push the menu over the edget</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Email</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group"><span class="input-group-addon"><i
+                                    class="glyphicon glyphicon-envelope"></i></span><input 
+                                placeholder="Email" class="form-control" required="true" value="" type="text" formControlName = "email"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Phone Number</label>
+                    <div class="col-md-7 inputGroupContainer">
+                        <div class="input-group"><span class="input-group-addon"><i
+                                    class="glyphicon glyphicon-earphone"></i></span><input 
+                                 placeholder="Phone Number" class="form-control" required="true"
+                                value="" type="text" formControlName = "phoneNo"></div>
+                    </div>
+                </div>
+                
+                    <button type="button" class="btn btn-success " [disabled]="uform.invalid">Register</button>
+               
+                </form>
+            </div>
+    </div>
+
+ -->
